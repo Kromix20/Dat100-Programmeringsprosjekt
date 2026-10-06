@@ -31,7 +31,15 @@ public class Customers {
         Customer c = null;
 
         // TODO
+        int i = 0;
+        while (i < this.customers.length && !funnet) {
+            c = this.customers[i];
 
+            if (c.getCustomer_id() == customer_id) {
+                funnet = true;
+            }
+            i++;
+        }
         return c;
     }
 
