@@ -57,6 +57,7 @@ public class DayMain {
         System.out.println("d) compute spot price for a single day");
         System.out.println("-----------------------------------------");
         checkOutput(d, computeSpotPrice(powerusage_day, powerprices_day));
+        System.out.println("-----------------------------------------");
 
 // e) compute power support for a given usage and price
         double e = 0;
