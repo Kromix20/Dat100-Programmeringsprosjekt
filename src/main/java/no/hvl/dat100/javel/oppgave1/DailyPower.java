@@ -27,7 +27,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            sum = sum + usage[i];
+        }
 
         return sum;
     }
@@ -37,7 +39,11 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+             price = price + (usage[i]*prices[i]);
+
+        }
+        System.out.println(price);
 
         return price;
     }
