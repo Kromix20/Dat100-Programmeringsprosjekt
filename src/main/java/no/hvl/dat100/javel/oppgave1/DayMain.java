@@ -1,6 +1,7 @@
 package no.hvl.dat100.javel.oppgave1;
 
 import no.hvl.dat100.javel.oppgave2.MonthlyPower;
+import static java.lang.Math.*;
 
 import static no.hvl.dat100.javel.oppgave1.DailyPower.*;
 
@@ -91,10 +92,16 @@ public class DayMain {
         //checkOutput();
     }
 public static void checkOutput(double output, double expectedOutput){
-        if(output == expectedOutput){
+
+        double check = Math.abs(output - expectedOutput);
+
+        if(check < 0.001){
             System.out.println("Gyldig output");
+
         } else{
             System.out.println("Output er ikke lik expected output");
+            System.out.println("Output: " + output);
+            System.out.println("Expected Output: " + expectedOutput);
         }
 }
 

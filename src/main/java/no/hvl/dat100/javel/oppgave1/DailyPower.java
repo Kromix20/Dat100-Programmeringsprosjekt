@@ -43,7 +43,6 @@ public class DailyPower {
              price = price + (usage[i]*prices[i]);
 
         }
-        System.out.println(price);
 
         return price;
     }
