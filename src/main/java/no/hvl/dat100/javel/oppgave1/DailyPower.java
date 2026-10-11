@@ -6,7 +6,7 @@ public class DailyPower {
     public static void printPowerPrices(double[] prices) {
 
         for(int i = 0; i < prices.length; i++){
-            System.out.print(prices[i]);
+            System.out.printf("%.2f NOK ",prices[i]);
         }
         System.out.println();
 
@@ -16,8 +16,9 @@ public class DailyPower {
     public static void printPowerUsage(double[] usage) {
 
         for(int i = 0; i < usage.length; i++){
-            System.out.println(usage[i]);
+            System.out.printf("%.2f kWh ", usage[i]);
         }
+        System.out.println();
 
     }
 

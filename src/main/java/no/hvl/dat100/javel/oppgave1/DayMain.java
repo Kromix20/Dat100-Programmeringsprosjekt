@@ -20,11 +20,23 @@ public class DayMain {
 
 // a) print power prices during a day
         System.out.println("a) print power prices during a day:");
+        System.out.println("-----------------------------------------");
         System.out.println("Result: ");
        printPowerPrices(powerprices_day);
        System.out.println("Expected result: ");
        System.out.print("0.10 NOK 0.20 NOK 0.30 NOK 0.40 NOK 0.50 NOK 0.60 NOK 0.70 NOK 0.80 NOK 1.90 NOK 1.00 NOK 1.10 NOK 1.20 NOK 1.30 NOK 1.40 NOK 1.50 NOK 1.60 NOK 1.70 NOK 1.80 NOK 1.90 NOK 2.00 NOK 1.50 NOK 1.00 NOK 0.50 NOK 0.10 NOK");
-
+       System.out.println();
 // b) print power usage during a day
+        System.out.println();
+        System.out.println("b) print power usage during a day:");
+        System.out.println("-----------------------------------------");
+        System.out.println("Result: ");
+        printPowerUsage(powerusage_day);
+
+        System.out.println("Expected result: ");
+        System.out.print("0.34 kWh 0.29 kWh 0.31 kWh 0.45 kWh 0.41 kWh 0.38 kWh 2.12 kWh 1.87 kWh 2.03 kWh 1.01 kWh 0.95 kWh 0.89 kWh 1.11 kWh 0.84 kWh 0.93 kWh 1.08 kWh 2.45 kWh 2.78 kWh 2.36 kWh 2.19 kWh 0.91 kWh 0.73 kWh 0.66 kWh 0.59 kWh");
     }
-}
+
+
+    }
+
