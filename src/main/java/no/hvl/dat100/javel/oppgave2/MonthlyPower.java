@@ -55,21 +55,13 @@ public class MonthlyPower {
         double usage = 0;
         int dag = 0;
 
-        while(dag < powerusage.length){
+        while(dag < powerusage.length && exceeded == false){
             usage = usage + DailyPower.computePowerUsage(powerusage[dag]);
             dag++;
             if(usage > threshold){
                 exceeded = true;
             }
-
         }
-
-
-
-
-
-
-
         return exceeded;
     }
 
