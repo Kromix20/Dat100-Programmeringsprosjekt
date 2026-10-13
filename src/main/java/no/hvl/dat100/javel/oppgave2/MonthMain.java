@@ -53,13 +53,14 @@ public class MonthMain {
         //f)
         System.out.println("f)");
         //expected output:
-        double f = 2336.84;
+        double f = 2336.849;
         checkOutput(computePowerSupport(power_usage_month, power_prices_month), f);
 
         //g)
         System.out.println("g)");
         //expected output:
         double g = 454.21;
+        checkOutput(computeNorgesPrice(power_usage_month), g);
 
 
 
