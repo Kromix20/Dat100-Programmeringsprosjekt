@@ -41,21 +41,20 @@ public class MonthMain {
 
         //d)
         System.out.println("d)");
-        //expected output:
-        System.out.println(exceedThreshold(power_usage_month, 1000));
-        System.out.println(exceedThreshold(power_usage_month, 5000));
-        System.out.println(exceedThreshold(power_usage_month, 500));
-        //lag egen check for denne oppgaven
+        CheckD(power_usage_month);
+
 
         //e)
         System.out.println("e)");
         //expected output:
-        double e = 3448.14;
+        double e = 3448.142;
+        checkOutput(computeSpotPrice(power_usage_month, power_prices_month),e);
 
         //f)
         System.out.println("f)");
         //expected output:
         double f = 2336.84;
+        checkOutput(computePowerSupport(power_usage_month, power_prices_month), f);
 
         //g)
         System.out.println("g)");
@@ -63,6 +62,38 @@ public class MonthMain {
         double g = 454.21;
 
 
+
+    }
+    public static void CheckD (double[][] powerusage){
+        //sjekker flere verdier og ser om jeg får forventet svar
+        boolean bo = true;
+        while(bo){
+            if(exceedThreshold(MonthPowerData.powerusage_month, 1000)){
+                System.out.println("Ugyldig output");
+                System.out.println("Expected Output: False");
+                System.out.println("Output: " + (exceedThreshold(MonthPowerData.powerusage_month, 1000)));
+                bo = false;
+                return;
+            }
+            if(exceedThreshold(MonthPowerData.powerusage_month, 5000)){
+                System.out.println("Ugyldig output");
+                System.out.println("Expected Output: False");
+                System.out.println("Output: " + (exceedThreshold(MonthPowerData.powerusage_month, 1000)));
+                bo = false;
+                return;
+            }
+            if(!exceedThreshold(MonthPowerData.powerusage_month, 500)){
+                System.out.println("Ugyldig output");
+                System.out.println("Expected Output: True");
+                System.out.println("Output: " + (exceedThreshold(MonthPowerData.powerusage_month, 1000)));
+                bo = false;
+                return;
+            }
+            else{
+                System.out.println("Gyldig Output");
+                return;
+            }
+        }
 
     }
 

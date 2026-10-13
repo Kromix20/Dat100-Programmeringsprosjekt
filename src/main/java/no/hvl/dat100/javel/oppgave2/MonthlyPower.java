@@ -2,6 +2,8 @@ package no.hvl.dat100.javel.oppgave2;
 
 import no.hvl.dat100.javel.oppgave1.DailyPower;
 
+
+
 public class MonthlyPower {
 
     // a) print power usage for a month
@@ -70,7 +72,11 @@ public class MonthlyPower {
 
         double price = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            for(int j = 0; j < usage[i].length; j++){
+                price = price + (usage[i][j] * prices[i][j]);
+            }
+        }
 
         return price;
     }
@@ -80,7 +86,11 @@ public class MonthlyPower {
 
         double support = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            for(int j = 0; j < usage[i].length; j++){
+               support = support + DailyPower.computePowerSupport(usage[j], prices[j]);
+            }
+        }
 
         return support;
     }
