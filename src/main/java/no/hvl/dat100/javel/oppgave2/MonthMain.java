@@ -2,6 +2,8 @@ package no.hvl.dat100.javel.oppgave2;
 
 import no.hvl.dat100.javel.oppgave1.DayPowerData;
 
+import static no.hvl.dat100.javel.oppgave2.MonthlyPower.*;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MonthMain {
@@ -17,13 +19,25 @@ public class MonthMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
+        //a)
+        System.out.println("a)");
+        System.out.println();
+        print_PowerUsage(power_usage_month);
+        System.out.println();
+        System.out.println();
+        //b)
+        System.out.println("b)");
+        System.out.println();
+        print_PowerPrices(power_prices_month);
+        System.out.println();
+        //c)
+        System.out.println("c)");
+        System.out.println();
+        computePowerUsage(power_usage_month);
+        System.out.println();
 
-         Write code that tests the methods you implement in the MonthlyPower class
-         Remember to teste the methods as you implement them
-         Remember to also to check that you get the expected results
-         */
 
     }
+
+
 }
