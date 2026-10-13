@@ -42,6 +42,9 @@ public class MonthMain {
         //d)
         System.out.println("d)");
         //expected output:
+        System.out.println(exceedThreshold(power_usage_month, 1000));
+        System.out.println(exceedThreshold(power_usage_month, 5000));
+        System.out.println(exceedThreshold(power_usage_month, 500));
         //lag egen check for denne oppgaven
 
         //e)
