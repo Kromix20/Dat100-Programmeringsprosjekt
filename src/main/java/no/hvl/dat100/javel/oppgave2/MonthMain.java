@@ -2,6 +2,7 @@ package no.hvl.dat100.javel.oppgave2;
 
 import no.hvl.dat100.javel.oppgave1.DayPowerData;
 
+import static no.hvl.dat100.javel.oppgave1.DayMain.checkOutput;
 import static no.hvl.dat100.javel.oppgave2.MonthlyPower.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -32,9 +33,32 @@ public class MonthMain {
         System.out.println();
         //c)
         System.out.println("c)");
+        //expected output:
+        double c = 908.42;
         System.out.println();
-        computePowerUsage(power_usage_month);
+        checkOutput(computePowerUsage(power_usage_month),c);
         System.out.println();
+
+        //d)
+        System.out.println("d)");
+        //expected output:
+        //lag egen check for denne oppgaven
+
+        //e)
+        System.out.println("e)");
+        //expected output:
+        double e = 3448.14;
+
+        //f)
+        System.out.println("f)");
+        //expected output:
+        double f = 2336.84;
+
+        //g)
+        System.out.println("g)");
+        //expected output:
+        double g = 454.21;
+
 
 
     }
