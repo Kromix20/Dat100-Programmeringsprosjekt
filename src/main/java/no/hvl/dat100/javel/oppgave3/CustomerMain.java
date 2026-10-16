@@ -11,11 +11,28 @@ public class CustomerMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
 
-         Write code that creates a Customer object and teste the methods implemented in the class
+        Customer customer = new Customer("Ola Nordmann", "ola@example.com", 1, PowerAgreementType.SPOTPRICE);
 
-        */
+
+        System.out.println("Opprettet kunde:");
+        System.out.println(customer);
+        System.out.println();
+
+
+        System.out.println("Navn: " + customer.getName());
+        System.out.println("E-post: " + customer.getEmail());
+        System.out.println("Kunde-ID: " + customer.getCustomer_id());
+        System.out.println("Avtale: " + customer.getAgreement());
+        System.out.println();
+
+
+        customer.setName("Kari Nordmann");
+        customer.setEmail("kari@example.com");
+        customer.setCustomer_id(2);
+        customer.setAgreement(PowerAgreementType.NORGESPRICE);
+
+        System.out.println("Etter endring med setters:");
+        System.out.println(customer);
     }
 }

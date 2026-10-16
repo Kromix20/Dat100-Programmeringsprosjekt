@@ -33,12 +33,12 @@ public class Customers {
         boolean funnet = false;
         Customer c = null;
 
-        // TODO
+
         int i = 0;
         while (i < this.customers.length && !funnet) {
-            c = this.customers[i];
-
-            if (c.getCustomer_id() == customer_id) {
+            if (this.customers[i] != null
+                    && this.customers[i].getCustomer_id() == customer_id) {
+                c = this.customers[i];
                 funnet = true;
             }
             i++;
