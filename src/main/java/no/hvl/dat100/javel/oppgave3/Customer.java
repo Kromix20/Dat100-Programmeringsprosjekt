@@ -52,5 +52,10 @@ public class Customer {
     }
 
     // TODO - toString method
-
+    @Override
+    public String toString() {
+        return "Customer [name=" + name +
+                ", email=" + email +
+                ", customer_id=" + customer_id +
+                ", agreement=" + agreement + "]";
 }
