@@ -7,19 +7,14 @@ public class DailyPower {
     // a) print power prices during a day
     public static void printPowerPrices(double[] prices) {
 
-        // TODO
-        System.out.println("Strømpriser per time:");
         for (double pris : prices) {
             System.out.printf("%.2f NOK ", pris);
         }
-        System.out.println("\n");
     }
 
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
 
-        // TODO
-        System.out.println("Strømforbruk per time:");
         for (double i : usage) {
             System.out.print(i + " kWh ");
         }
@@ -31,7 +26,6 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
         for (int i = 0; i < usage.length; i++) {
             sum += usage[i];
         }
@@ -43,7 +37,6 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
         // Kostnad = Strømforbruk * Spotpris
         for (int i = 0; i < usage.length; i++) {
             price += usage[i] * prices[i];
@@ -59,7 +52,6 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
         if (price > THRESHOLD) {
             support = (price - THRESHOLD)  * PERCENTAGE * usage;
         }
@@ -72,7 +64,6 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
         for (int i = 0; i < usage.length; i++) {
             support += getSupport(usage[i], prices[i]);
         }
@@ -87,7 +78,6 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
         for (double hourlyUsage : usage) {
             price += hourlyUsage * NORGESPRIS_KWH;
         }
@@ -100,7 +90,6 @@ public class DailyPower {
 
         double temp_max = 0;
 
-        // TODO
         for (double hourlyUsage : usage) {
             temp_max = max(temp_max, hourlyUsage);
         }
@@ -110,8 +99,6 @@ public class DailyPower {
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
-
-        // TODO
         double totalUsage = 0;
 
         if (usage.length > 0) {

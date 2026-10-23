@@ -5,7 +5,6 @@ public class MonthlyPower {
     // a) print power usage for a month
     public static void print_PowerUsage(double[][] usage) {
 
-        // TODO
         int day = 1;
         for (double[] dailyUsage : usage) {
             System.out.print("Day " + day + ": ");
@@ -20,7 +19,6 @@ public class MonthlyPower {
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
 
-        // TODO
         int day = 1;
         for (double[] dailyPrices : prices) {
             System.out.print("Day " + day + ": ");
@@ -38,7 +36,6 @@ public class MonthlyPower {
 
         double sum = 0;
 
-        // TODO
         for (double[] dailyUsage : usage) {
             for (double hourlyUsage : dailyUsage) {
 
@@ -55,7 +52,6 @@ public class MonthlyPower {
         boolean exceeded = false;
         double usage = 0;
 
-        // TODO
         // Variabelen 'exceeded' er ikke egentlig nødvendig her, men har den med siden den er inkludert i startkoden.
 
         int day = 0;
@@ -83,7 +79,6 @@ public class MonthlyPower {
 
         double price = 0;
 
-        // TODO
         for (int day = 0; day < usage.length; day++) {
             for (int hour = 0; hour < usage[day].length; hour++) {
                 price += usage[day][hour] * prices[day][hour];
@@ -100,8 +95,7 @@ public class MonthlyPower {
 
         double support = 0;
 
-        // TODO
-        // Usikker på om jeg skal bruke metode direkte fra oppgave 1, men har valgt å ikke gjøre det.
+        // Usikker på om vi skal bruke metode direkte fra oppgave 1, men har valgt å ikke gjøre det.
         for (int day = 0; day < usage.length; day++) {
             for (int hour = 0; hour < usage[day].length; hour++) {
                 if (prices[day][hour] > THRESHOLD) {
@@ -120,7 +114,6 @@ public class MonthlyPower {
 
         double price = 0;
 
-        // TODO
         for (double[] dailyUsage : usage) {
             for (double hourlyUsage : dailyUsage) {
 

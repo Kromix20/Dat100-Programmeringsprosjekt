@@ -9,7 +9,6 @@ public class Customers {
     // a) Complete constructor
     public Customers(int size) {
 
-        // TODO
         this.customers = new Customer[size];
 
     }
@@ -19,7 +18,6 @@ public class Customers {
 
         int count = 0;
 
-        // TODO
         for (Customer customer : customers) {
             if (customer != null) count++;
         }
@@ -31,9 +29,8 @@ public class Customers {
 
         boolean funnet = false;
         Customer c = null;
-
-        // TODO
         int i = 0;
+
         while (i < this.customers.length && !funnet) {
             c = this.customers[i];
 
@@ -54,7 +51,6 @@ public class Customers {
 
         boolean inserted = false;
 
-        // TODO
         for (int i = 0; i < customers.length; i++) {
             if (customers[i] == null) {
                 customers[i] = c;
@@ -71,7 +67,6 @@ public class Customers {
         // boolean deleted = false; Ikke nødvendig når jeg bruker denne for-løkken.
         Customer c = null;
 
-        // TODO
         for (int i = 0; i < customers.length; i++) {
             if (customers[i] != null && customers[i].getCustomer_id() == customer_id) {
                 c = customers[i];
@@ -87,7 +82,6 @@ public class Customers {
 
         Customer[] customers = null;
 
-        // TODO
         customers = new Customer[countNonNull()];
         int j = 0;
 

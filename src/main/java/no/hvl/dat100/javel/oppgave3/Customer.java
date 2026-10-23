@@ -2,7 +2,7 @@ package no.hvl.dat100.javel.oppgave3;
 
 public class Customer {
 
-    // TODO - object variables (attributes)
+    // object variables (attributes)
     private String name;
     private String email;
     private int customer_id;
@@ -10,7 +10,6 @@ public class Customer {
 
     public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
 
-        // TODO
         this.name = name;
         this.email = email;
         this.customer_id = customer_id;
@@ -18,11 +17,10 @@ public class Customer {
 
     }
 
-    // TODO - getter/setter methods for all objectvariables
+    // getter/setter methods for all objectvariables
     public String getName() {
         return this.name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -30,7 +28,6 @@ public class Customer {
     public String getEmail() {
         return this.email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -38,7 +35,6 @@ public class Customer {
     public int getCustomer_id() {
         return this.customer_id;
     }
-
     public void setCustomer_id(int customer_id) {
         this.customer_id = customer_id;
     }
@@ -46,12 +42,10 @@ public class Customer {
     public PowerAgreementType getAgreement() {
         return this.agreement;
     }
-
     public void setAgreement(PowerAgreementType agreement) {
         this.agreement = agreement;
     }
 
-    // TODO - toString method
     @Override
     public String toString() {
 

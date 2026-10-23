@@ -12,13 +12,6 @@ public class CustomersMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
-
-         Write code that uses and tests the methods implemented in the Customers class
-
-        */
-
         Customers customers = new Customers(5);
 
         Customer k1 = new Customer("Gregor Gregorson", "Gregorg@hvl", 1, PowerAgreementType.SPOTPRICE);
