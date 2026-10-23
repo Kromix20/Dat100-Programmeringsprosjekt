@@ -9,7 +9,7 @@ public class Customers {
     // a) Complete constructor
     public Customers(int size) {
 
-        // TODO
+        this.customers = new Customer[size];
 
     }
 
@@ -19,7 +19,11 @@ public class Customers {
 
         int count = 0;
 
-        // TODO
+        for(int i = 0; i < customers.length; i++){
+            if(customers[i] != null){
+                count++;
+            }
+        }
 
         return count;
     }
@@ -30,12 +34,11 @@ public class Customers {
         boolean funnet = false;
         Customer c = null;
 
-        // TODO
         int i = 0;
         while (i < this.customers.length && !funnet) {
-            c = this.customers[i];
 
-            if (c.getCustomer_id() == customer_id) {
+            if (this.customers[i] != null && this.customers[i].getCustomer_id() == customer_id) {
+                c = this.customers[i];
                 funnet = true;
             }
             i++;
@@ -48,7 +51,13 @@ public class Customers {
 
         boolean inserted = false;
 
-        // TODO
+        for(int i = 0; i < customers.length; i++){
+            if(customers[i] == null){
+                customers[i] = c;
+                inserted = true;
+                break;
+            }
+        }
 
         return inserted;
     }
@@ -56,10 +65,15 @@ public class Customers {
     // e) remove customer with given id from reference table
     public Customer removeCustomer(int customer_id) {
 
-        boolean deleted = false;
         Customer c = null;
 
-        // TODO
+        for(int i = 0; i < customers.length; i++){
+            if(customers[i] != null && customers[i].getCustomer_id() == customer_id){
+                c = customers[i];
+                customers[i] = null;
+                break;
+            }
+        }
 
         return c;
     }
@@ -67,9 +81,16 @@ public class Customers {
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
+        Customer[] customers = new Customer[countNonNull()];
 
-        // TODO
+        int j = 0;
+
+        for(int i = 0; i < this.customers.length; i++){
+            if(this.customers[i] != null){
+                customers[j] = this.customers[i];
+                j++;
+            }
+        }
 
         return customers;
     }

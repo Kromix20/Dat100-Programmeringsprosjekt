@@ -105,9 +105,9 @@ public class DailyPower {
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
-
-        average = computePowerUsage(usage) / usage.length;
-
+        if(usage.length > 0) {
+            average = computePowerUsage(usage) / usage.length;
+        }
         return average;
     }
 }
