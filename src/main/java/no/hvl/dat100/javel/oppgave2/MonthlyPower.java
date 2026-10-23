@@ -2,37 +2,33 @@ package no.hvl.dat100.javel.oppgave2;
 
 import no.hvl.dat100.javel.oppgave1.DailyPower;
 
-
-
 public class MonthlyPower {
 
     // a) print power usage for a month
     public static void print_PowerUsage(double[][] usage) {
 
-        int dag = 1;
-        for(int i = 0; i < usage.length; i++){
-            System.out.println();
-            System.out.print("Dag " + dag + ": ");
-            dag++;
-            for(int j = 0; j < usage[i].length; j++){
-                System.out.printf("%.2f kWh ",usage[i][j]);
+        int day = 1;
+        for (double[] dailyUsage : usage) {
+            System.out.print("Dag " + day + ": ");
+            for (double hourlyUsage : dailyUsage) {
+                System.out.printf("%.2f kWh ", hourlyUsage);
             }
+            System.out.println();
+            day++;
         }
-
     }
 
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
 
-        int dag = 1;
-        for (int i = 0; i < prices.length; i++) {
-            System.out.println();
-            System.out.print("Dag " + dag + ": ");
-            dag++;
-            for (int j = 0; j < prices[i].length; j++) {
-                System.out.printf("%.2f NOK ", prices[i][j]);
+        int day = 1;
+        for (double[] dailyPrices : prices) {
+            System.out.print("Dag " + day + ": ");
+            for (double hourlyPrice : dailyPrices) {
+                System.out.printf("%.2f NOK ", hourlyPrice);
             }
-
+            System.out.println();
+            day++;
         }
     }
 
@@ -41,9 +37,9 @@ public class MonthlyPower {
 
         double sum = 0;
 
-        for(int i = 0; i < usage.length; i++){
-            for(int j = 0; j < usage[i].length; j++){
-                sum = sum + usage[i][j];
+        for (double[] dailyUsage : usage) {
+            for (double hourlyUsage : dailyUsage) {
+                sum += hourlyUsage;
             }
         }
 
@@ -55,15 +51,16 @@ public class MonthlyPower {
 
         boolean exceeded = false;
         double usage = 0;
-        int dag = 0;
+        int day = 0;
 
-        while(dag < powerusage.length && exceeded == false){
-            usage = usage + DailyPower.computePowerUsage(powerusage[dag]);
-            dag++;
-            if(usage > threshold){
+        while (day < powerusage.length && !exceeded) {
+            usage += DailyPower.computePowerUsage(powerusage[day]);
+            day++;
+            if (usage > threshold) {
                 exceeded = true;
             }
         }
+
         return exceeded;
     }
 
@@ -72,9 +69,9 @@ public class MonthlyPower {
 
         double price = 0;
 
-        for(int i = 0; i < usage.length; i++){
-            for(int j = 0; j < usage[i].length; j++){
-                price = price + (usage[i][j] * prices[i][j]);
+        for (int day = 0; day < usage.length; day++) {
+            for (int hour = 0; hour < usage[day].length; hour++) {
+                price += usage[day][hour] * prices[day][hour];
             }
         }
 
@@ -86,10 +83,9 @@ public class MonthlyPower {
 
         double support = 0;
 
-        for(int i = 0; i < usage.length; i++){
-               support = support + DailyPower.computePowerSupport(usage[i], prices[i]);
-            }
-
+        for (int day = 0; day < usage.length; day++) {
+            support += DailyPower.computePowerSupport(usage[day], prices[day]);
+        }
 
         return support;
     }
@@ -99,8 +95,8 @@ public class MonthlyPower {
 
         double price = 0;
 
-        for (double[] doubles : usage) {
-            price = price + DailyPower.computeNorgesPrice(doubles);
+        for (double[] dailyUsage : usage) {
+            price += DailyPower.computeNorgesPrice(dailyUsage);
         }
 
         return price;

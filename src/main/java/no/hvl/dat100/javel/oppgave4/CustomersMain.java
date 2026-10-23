@@ -3,6 +3,7 @@ package no.hvl.dat100.javel.oppgave4;
 import no.hvl.dat100.javel.oppgave3.Customer;
 import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
 
+import static no.hvl.dat100.javel.oppgave1.DayMain.checkBoolean;
 import static no.hvl.dat100.javel.oppgave3.CustomerMain.checkInt;
 
 public class CustomersMain {
@@ -92,16 +93,6 @@ public class CustomersMain {
     }
 
     public static void checkCustomer(Customer output, Customer expectedOutput) {
-        if (output == expectedOutput) {
-            System.out.println("Gyldig output");
-        } else {
-            System.out.println("Output er ikke lik expected output");
-            System.out.println("Output: " + output);
-            System.out.println("Expected Output: " + expectedOutput);
-        }
-    }
-
-    public static void checkBoolean(boolean output, boolean expectedOutput) {
         if (output == expectedOutput) {
             System.out.println("Gyldig output");
         } else {
