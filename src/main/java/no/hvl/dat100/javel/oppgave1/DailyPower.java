@@ -28,7 +28,7 @@ public class DailyPower {
         double sum = 0;
 
         for(int i = 0; i < usage.length; i++){
-            sum = sum + usage[i];
+            sum += usage[i];
         }
 
         return sum;
@@ -40,7 +40,7 @@ public class DailyPower {
         double price = 0;
 
         for(int i = 0; i < usage.length; i++){
-             price = price + (usage[i]*prices[i]);
+            price += usage[i] * prices[i];
 
         }
 
@@ -68,7 +68,7 @@ public class DailyPower {
         double support = 0;
 
         for(int i = 0; i < usage.length; i++){
-                support = support + getSupport(usage[i],prices[i]);
+            support += getSupport(usage[i], prices[i]);
         }
 
         return support;
