@@ -19,11 +19,15 @@ public class MonthMain {
 
         /*
         TODO
+        print_PowerUsage()
 
          Write code that tests the methods you implement in the MonthlyPower class
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
          */
-
+        System.out.println("Power usage per month:");
+        MonthlyPower.print_PowerUsage(power_usage_month);
+        System.out.println("\nPower prices per month:");
+        MonthlyPower.print_PowerPrices(power_prices_month);
     }
 }

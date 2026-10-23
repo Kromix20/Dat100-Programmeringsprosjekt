@@ -19,5 +19,26 @@ public class CustomersMain {
 
         */
 
+        Customers customers = new Customers(5);
+
+        Customer k1 = new Customer("Gregor Gregorson", "Gregorg@hvl", 1, PowerAgreementType.SPOTPRICE);
+        Customer k2 = new Customer("Johnson Johnson", "jj@hvl", 2, PowerAgreementType.NORGESPRICE);
+        Customer k3 = new Customer("Aladdin Rat", "rat@hvl", 3, PowerAgreementType.POWERSUPPORT);
+
+        customers.addCustomer(k1);
+        customers.addCustomer(k2);
+        customers.addCustomer(k3);
+
+        System.out.println("Antall kunder: " + customers.countNonNull());
+
+        System.out.println(customers.getCustomer(2));
+        System.out.println(customers.getCustomer(4));
+
+        System.out.println("\nSlettet kunde:");
+        System.out.println(customers.removeCustomer(2));
+
+        System.out.println("\nAntall kunder etter sletting: " + customers.countNonNull());
+        System.out.println("Søker etter slettet kunde: " + customers.getCustomer(2));
+
     }
 }

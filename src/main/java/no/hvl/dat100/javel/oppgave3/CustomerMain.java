@@ -17,5 +17,20 @@ public class CustomerMain {
          Write code that creates a Customer object and teste the methods implemented in the class
 
         */
+
+        Customer k1 = new Customer("Nicolai", "n.lindlo@hvl", 1, PowerAgreementType.SPOTPRICE);
+
+        System.out.println(k1.getName());
+        System.out.println(k1.getEmail());
+        System.out.println(k1.getCustomer_id());
+        System.out.println(k1.getAgreement());
+
+        k1.setName("Herman");
+        k1.setEmail("herman@hvl");
+        k1.setCustomer_id(2);
+        k1.setAgreement(PowerAgreementType.NORGESPRICE);
+
+        System.out.println();
+        System.out.println(k1.toString());
     }
 }
