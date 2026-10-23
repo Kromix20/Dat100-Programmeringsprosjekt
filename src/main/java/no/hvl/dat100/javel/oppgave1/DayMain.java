@@ -86,6 +86,8 @@ public class DayMain {
         System.out.println("h) compute peak usage during a single day");
         System.out.println("-----------------------------------------");
         checkOutput(findPeakUsage(powerusage_day), h);
+        //tom tabell skal gi 0 og ikke krasje
+        checkOutput(findPeakUsage(new double[0]), 0);
         System.out.println("-----------------------------------------");
         System.out.println();
 
@@ -95,10 +97,13 @@ public class DayMain {
         System.out.println("i) find Avg Power usage");
         System.out.println("-----------------------------------------");
         checkOutput(findAvgPower(powerusage_day),i);
+        //tom tabell skal gi 0 og ikke dele på 0
+        checkOutput(findAvgPower(new double[0]), 0);
         System.out.println("-----------------------------------------");
         System.out.println();
     }
-public static void checkOutput(double output, double expectedOutput){
+
+    public static void checkOutput(double output, double expectedOutput){
 
         double check = Math.abs(output - expectedOutput);
 
@@ -110,7 +115,16 @@ public static void checkOutput(double output, double expectedOutput){
             System.out.println("Output: " + output);
             System.out.println("Expected Output: " + expectedOutput);
         }
-}
-
     }
+
+    public static void checkBoolean(boolean output, boolean expectedOutput) {
+        if (output == expectedOutput) {
+            System.out.println("Gyldig output");
+        } else {
+            System.out.println("Output er ikke lik expected output");
+            System.out.println("Output: " + output);
+            System.out.println("Expected Output: " + expectedOutput);
+        }
+    }
+}
 

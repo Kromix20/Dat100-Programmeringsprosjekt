@@ -16,11 +16,10 @@ public class Customers {
     // b) count number of non-null references
     public int countNonNull() {
 
-
         int count = 0;
 
-        for(int i = 0; i < customers.length; i++){
-            if(customers[i] != null){
+        for (Customer customer : customers) {
+            if (customer != null) {
                 count++;
             }
         }
@@ -36,7 +35,6 @@ public class Customers {
 
         int i = 0;
         while (i < this.customers.length && !funnet) {
-
             if (this.customers[i] != null && this.customers[i].getCustomer_id() == customer_id) {
                 c = this.customers[i];
                 funnet = true;
@@ -51,12 +49,13 @@ public class Customers {
 
         boolean inserted = false;
 
-        for(int i = 0; i < customers.length; i++){
-            if(customers[i] == null){
+        int i = 0;
+        while (i < customers.length && !inserted) {
+            if (customers[i] == null) {
                 customers[i] = c;
                 inserted = true;
-                break;
             }
+            i++;
         }
 
         return inserted;
@@ -65,14 +64,17 @@ public class Customers {
     // e) remove customer with given id from reference table
     public Customer removeCustomer(int customer_id) {
 
+        boolean deleted = false;
         Customer c = null;
 
-        for(int i = 0; i < customers.length; i++){
-            if(customers[i] != null && customers[i].getCustomer_id() == customer_id){
+        int i = 0;
+        while (i < customers.length && !deleted) {
+            if (customers[i] != null && customers[i].getCustomer_id() == customer_id) {
                 c = customers[i];
                 customers[i] = null;
-                break;
+                deleted = true;
             }
+            i++;
         }
 
         return c;
@@ -85,8 +87,8 @@ public class Customers {
 
         int j = 0;
 
-        for(int i = 0; i < this.customers.length; i++){
-            if(this.customers[i] != null){
+        for (int i = 0; i < this.customers.length; i++) {
+            if (this.customers[i] != null) {
                 customers[j] = this.customers[i];
                 j++;
             }
